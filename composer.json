@@ -23,7 +23,7 @@
     },
     "extra": {
         "laravel": {
-            "providers": ["limenet\\SentryLaravelCaptureLog\\SLCLServiceProvider"]
+            "providers": ["limenet\\SentryLaravelCaptureLog\\ServiceProvider"]
         }
     }
 }

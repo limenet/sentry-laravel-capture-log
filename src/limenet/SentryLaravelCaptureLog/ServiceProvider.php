@@ -2,9 +2,9 @@
 
 namespace limenet\SentryLaravelCaptureLog;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class SLCLServiceProvider extends ServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     public function boot()
     {
