@@ -1,0 +1,28 @@
+{
+    "name": "limenet/sentry-laravel-capture-log",
+    "type": "plugin",
+    "description": "Capture Laravel Log:: entries in Sentry",
+    "keywords": ["logging", "errors", "laravel", "sentry"],
+    "homepage": "https://github.com/limenet/sentry-laravel-capture-log",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Linus Metzler",
+            "email": "hi@linusmetzler.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "sentry/sentry-laravel": "^0.8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "limenet\\SentryLaravelCaptureLog": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["limenet\\SentryLaravelCaptureLog\\SLCLServiceProvider"]
+        }
+    }
+}
