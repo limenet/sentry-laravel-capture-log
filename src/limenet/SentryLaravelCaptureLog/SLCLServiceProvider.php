@@ -9,7 +9,7 @@ class SLCLServiceProvider extends ServiceProvider
     public function boot()
     {
         $app = $this->app;
-            $this->bindEvents($app);
+        $this->bindEvents($app);
     }
 
     /**
@@ -22,6 +22,5 @@ class SLCLServiceProvider extends ServiceProvider
         $handler = new SLCLEventHandler();
 
         $handler->subscribe($app->events);
-
     }
 }
