@@ -1,6 +1,6 @@
 <?php
 
-namespace Sentry\SentryLaravel;
+namespace limenet\SentryLaravelCaptureLog;
 
 use Illuminate\Support\ServiceProvider;
 
