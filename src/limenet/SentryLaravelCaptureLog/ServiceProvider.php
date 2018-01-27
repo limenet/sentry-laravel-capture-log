@@ -12,11 +12,6 @@ class ServiceProvider extends BaseServiceProvider
         $this->bindEvents($app);
     }
 
-    /**
-     * Bind to the Laravel event dispatcher to log events.
-     *
-     * @param $app
-     */
     protected function bindEvents($app)
     {
         $handler = new SLCLEventHandler();
