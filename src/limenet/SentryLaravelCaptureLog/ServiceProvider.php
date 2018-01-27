@@ -14,7 +14,7 @@ class ServiceProvider extends BaseServiceProvider
 
     protected function bindEvents($app)
     {
-        $handler = new SLCLEventHandler();
+        $handler = new EventHandler();
 
         $handler->subscribe($app->events);
     }
