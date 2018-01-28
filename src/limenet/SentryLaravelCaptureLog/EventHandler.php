@@ -23,8 +23,14 @@ class EventHandler
             return;
         }
 
-        if (array_key_exists('exception', $context)) {
-            if ($context['exception']instanceof \Throwable) {
+        if (is_array($context) && array_key_exists('exception', $context)) {
+            if ($context['exception'] instanceof \Throwable) {
+                return;
+            }
+        }
+
+        if (is_object($context) && property_exists($context, 'exception')) {
+            if ($context->exception instanceof \Throwable) {
                 return;
             }
         }
