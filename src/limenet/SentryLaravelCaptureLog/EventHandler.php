@@ -22,13 +22,16 @@ class EventHandler
         if ($level === 'debug') {
             return;
         }
-
+        
+        // Exceptions are handled by the sentry/sentry-laravel package
+        // Check if $context is an array and check for an exception stored in there
         if (is_array($context) && array_key_exists('exception', $context)) {
             if ($context['exception'] instanceof \Throwable) {
                 return;
             }
         }
 
+        // Check if $context is an object and check for an exception stored in there
         if (is_object($context) && property_exists($context, 'exception')) {
             if ($context->exception instanceof \Throwable) {
                 return;
