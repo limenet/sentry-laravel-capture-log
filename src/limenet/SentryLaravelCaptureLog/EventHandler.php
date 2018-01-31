@@ -35,8 +35,6 @@ class EventHandler
             }
         }
 
-        $context['level'] = $level;
-
-        app('sentry')->captureMessage($message, [], $context);
+        app('sentry')->captureMessage($message, [], ['level' => $level, 'extra' => $context]);
     }
 }
